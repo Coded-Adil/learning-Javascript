@@ -4,5 +4,5 @@ const computer = {
     ram: 16,
     processor: "intel"
 }
-const keys = Object.keys(computer);
+const keys = Object.values(computer);
 console.log(keys);
