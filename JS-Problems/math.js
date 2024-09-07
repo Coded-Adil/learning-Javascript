@@ -1,0 +1,16 @@
+const min = Math.min(32,343,3,5,56,234,64,1,90,233);
+console.log(min);
+const max = Math.max(32,343,3,5,56,234,64,1,90,233);
+console.log(max);
+console.log(Math.PI);
+console.log(Math.abs(5-45));
+console.log(Math.round(5.345));
+console.log(Math.round(5.745));
+console.log(Math.round(5.5));
+console.log(Math.floor(5.5));
+console.log(Math.floor(5.99999));
+console.log(Math.ceil(5.99999));
+console.log(Math.ceil(5.2329));
+console.log(Math.random());
+console.log(Math.random()*10);
+console.log(Math.round(Math.random()*10));
