@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CommentBox</title>
+</head>
+<body>
+    <h1>Comment Here!!!</h1>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fuga, quam natus quo modi iure repudiandae dolores excepturi eaque illo amet cum eveniet accusantium sapiente consectetur fugit eius esse deleniti?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fuga, quam natus quo modi iure repudiandae dolores excepturi eaque illo amet cum eveniet accusantium sapiente consectetur fugit eius esse deleniti?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fuga, quam natus quo modi iure repudiandae dolores excepturi eaque illo amet cum eveniet accusantium sapiente consectetur fugit eius esse deleniti?</p>
+    </div>
+    <div>
+        <textarea name="" id="new-comment" cols="80" rows="10"></textarea>
+        <br>
+        <button id="btn-post">POST</button>
+    </div>
+
+    <script>
+        // Step 1: Add event listener
+        // Step 2: Get the Comment
+        document.getElementById('btn-post').addEventListener('click',function() {
+            const commentBox = document.getElementById('new-comment');
+            const newComment = commentBox.value;
+            console.log(newComment);
+
+            // Step 3: set the comment value as a paragraph
+            const commentContainer = document.getElementById('comment-container');
+            const p = document.createElement('p');
+            p.innerText = newComment;
+            commentContainer.appendChild(p); 
+            // Step 4: clear the textarea
+            commentBox.value = '';
+        })
+    </script>
+</body>
+</html>

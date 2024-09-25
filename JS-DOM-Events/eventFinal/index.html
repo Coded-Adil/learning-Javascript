@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final</title>
+</head>
+<body>
+    <h1>Fattaass website</h1>
+    <p id="inputDisplay">Input Text</p>
+    <input type="text" id="inputFild">
+    <button id="inputUpdate">Update</button>
+    <br>
+    <h3 id="handle-status">Default text</h3>
+    <button onclick="handelOnClick()">This is a very big button to add an event</button>
+    <button id="handleByListener">This is a very big button to add an event by abbEventListener</button>
+    <script>
+        function handelOnClick() {
+            const handelStatus = document.getElementById('handle-status');
+            handelStatus.innerText = 'Good job';
+        }
+
+        document.getElementById('handleByListener').addEventListener('click', function(){
+            const handelStatus = document.getElementById('handle-status');
+            handelStatus.innerText='Text Updated';
+        })
+
+        document.getElementById('inputUpdate').addEventListener('click',function() {
+            const inputBox = document.getElementById('inputFild');
+            // console.log(inputFild.value);
+            const inputText = inputFild.value;
+            const p = document.getElementById('inputDisplay');
+            p.innerText = inputText;
+            inputFild.value = '';
+        })
+    </script>
+</body>
+</html>

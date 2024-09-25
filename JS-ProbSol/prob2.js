@@ -8,3 +8,5 @@ function sendNotification(email) {
         return "Invalid Email";
     }
 }
+
+console.log(sendNotification('itsadil2022@gmail.com'));
